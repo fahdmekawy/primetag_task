@@ -70,7 +70,7 @@ Each feature follows clean architecture principles:
 
 ---
 
-## 📡 Offline Mode
+##  Offline Mode
 
 If product API fails (e.g., no internet), the app displays the cart from local Hive storage instead.
 
