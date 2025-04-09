@@ -1,15 +1,15 @@
-# 🛍️ PrimeTag Task
+# PrimeTag Task
 
 This is a Flutter application built as a technical task for PrimeTag. It includes:
 
-- ✅ Login flow using [ReqRes API](https://reqres.in)
-- 🛒 Product listing using [FakeStore API](https://fakestoreapi.com)
-- 🧺 Cart management with offline support using Hive
-- 💡 Clean Architecture + Bloc + Freezed
+-  Login flow using [ReqRes API](https://reqres.in)
+-  Product listing using [FakeStore API](https://fakestoreapi.com)
+-  Cart management with offline support using Hive
+-  Clean Architecture + Bloc + Freezed
 
 ---
 
-## 🚀 App Setup Instructions
+##  App Setup Instructions
 
 1. **Clone the repo**
    ```bash
@@ -34,7 +34,7 @@ This is a Flutter application built as a technical task for PrimeTag. It include
 
 ---
 
-## 📦 Dependencies Used
+##  Dependencies Used
 
 | Package                    | Purpose                                |
 |----------------------------|----------------------------------------|
@@ -48,7 +48,7 @@ This is a Flutter application built as a technical task for PrimeTag. It include
 
 ---
 
-## 🧠 Project Structure
+##  Project Structure
 
 ```
 lib/
