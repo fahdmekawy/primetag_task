@@ -1,11 +1,18 @@
-import '../entities/cart.dart';
+import 'package:dartz/dartz.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../data/models/cart_item_model.dart';
 
 abstract class CartRepository {
-  Future<void> addToCart(Cart cart);
+  Future<Either<Failure, void>> addToCart(CartItemModel item);
 
-  Future<void> removeFromCart(Cart cart);
+  Future<Either<Failure, void>> removeFromCart(int id);
 
-  Future<List<Cart>> getCartItems();
+  Future<Either<Failure, void>> updateQuantity(int id, int quantity);
 
-  Future<void> clearCart();
+  Future<Either<Failure, List<CartItemModel>>> getCartItems();
+
+  Future<Either<Failure, double>> getTotalPrice();
+
+  Future<Either<Failure, void>> clearCart();
 }

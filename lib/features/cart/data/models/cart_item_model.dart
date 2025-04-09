@@ -1,10 +1,9 @@
 import 'package:hive/hive.dart';
-import 'package:primetag_task/features/cart/domain/entities/cart.dart';
 
-part 'cart_model.g.dart';
+part 'cart_item_model.g.dart';
 
 @HiveType(typeId: 0)
-class CartItemModel extends Cart {
+class CartItemModel {
   @HiveField(0)
   final int id;
 
@@ -26,11 +25,5 @@ class CartItemModel extends Cart {
     required this.price,
     required this.quantity,
     required this.image,
-  }) : super(
-         id: id,
-         price: price,
-         quantity: quantity,
-         image: image,
-         title: title,
-       );
+  });
 }

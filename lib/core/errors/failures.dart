@@ -15,3 +15,7 @@ abstract class Failure extends Equatable {
 class ApiFailure extends Failure {
   const ApiFailure({required super.message, required super.statusCode});
 }
+
+class CacheFailure extends Failure {
+  const CacheFailure({required super.message, super.statusCode = 0});
+}

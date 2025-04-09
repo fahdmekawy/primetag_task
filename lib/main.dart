@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:primetag_task/features/products/presentation/bloc/product_event.dart';
 import 'app_start_page.dart';
 import 'bloc_observer.dart';
 import 'core/di/di_container.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 import 'features/auth/presentation/bloc/auth_event.dart';
+import 'features/cart/presentation/bloc/cart_bloc.dart';
+import 'features/products/presentation/bloc/product_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,8 +15,14 @@ void main() async {
   // Bloc.observer = AppBlocObserver();
 
   runApp(
-    BlocProvider(
-      create: (context) => sl<AuthBloc>()..add(const CheckAuthEvent()),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => sl<AuthBloc>()..add(const CheckAuthEvent()),
+        ),
+        BlocProvider(create: (context) => sl<CartBloc>()..add(LoadCart())),
+        BlocProvider(create: (context) => sl<ProductBloc>()..add(LoadProducts())),
+      ],
       child: const MyApp(),
     ),
   );
