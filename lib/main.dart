@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:primetag_task/features/products/presentation/bloc/product_event.dart';
 import 'app_start_page.dart';
-import 'bloc_observer.dart';
 import 'core/di/di_container.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 import 'features/auth/presentation/bloc/auth_event.dart';
@@ -21,7 +20,9 @@ void main() async {
           create: (context) => sl<AuthBloc>()..add(const CheckAuthEvent()),
         ),
         BlocProvider(create: (context) => sl<CartBloc>()..add(LoadCart())),
-        BlocProvider(create: (context) => sl<ProductBloc>()..add(LoadProducts())),
+        BlocProvider(
+          create: (context) => sl<ProductBloc>()..add(LoadProducts()),
+        ),
       ],
       child: const MyApp(),
     ),

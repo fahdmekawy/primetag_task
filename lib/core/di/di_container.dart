@@ -8,7 +8,6 @@ import 'package:primetag_task/features/cart/data/datasources/cart_local_datasour
 import 'package:primetag_task/features/cart/data/repositories/cart_repository_impl.dart';
 import 'package:primetag_task/features/cart/domain/repositories/cart_repository.dart';
 import 'package:primetag_task/features/cart/presentation/bloc/cart_bloc.dart';
-
 import '../../features/auth/data/datasources/auth_local_datasource.dart';
 import '../../features/auth/data/datasources/auth_remote_datasource.dart';
 import '../../features/auth/data/repositories/auth_repository_impl.dart';
